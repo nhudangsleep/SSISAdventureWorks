@@ -29,7 +29,7 @@ Here, we use a foreach loop to iterate through all file names without having to 
 loading status of each file. Once confirmed, the data flow is triggered to load the respective file into the designated table. Simultaneously, vital information, specifically the file name, is logged into the tbl_logs table. 
 
 #### Data Warehouse
-The ETL process for our data warehouse simply contains these steps:
+The ETL process for our data warehouse consists of these steps:
 - Extract data
 - Join relevant tables
 - Transform & map data columns
