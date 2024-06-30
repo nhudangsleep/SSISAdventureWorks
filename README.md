@@ -13,13 +13,13 @@ Tools used in this project:
 - SQL Server Management Studio (SSMS)
 
 ## What we did
-### Data Ingestion (?) // Overall Process
+### 1. Data Ingestion (?) // Overall Process
 To create a data warehouse, we must first have some data to store in the warehouse. Sooo, here comes the ingestion process for each type of data source:
 - Database: Get full loaded for the first time, then incremental loaded;
 - Other file types (.tsv, .xlsx, .xml, etc.): Get ingested into the staging area and organized into the appropriate folder.
 
-### Data Modeling
+### 2. Data Modeling
 The next step is to identify which data is going to serve as a fact or a dimensional table. For this project, we conducted the data modeling process following a snowflake schema and identified 1 fact and 7 dimensional tables, which are: DimLocation, DimTerritory, DimCustomer, DimProduct, DimCategory, DimSubcategory, DimTime, and FactSales.
 
-### ETL
+### 3. ETL
 #### Data Staging Area
