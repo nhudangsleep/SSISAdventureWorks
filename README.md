@@ -2,9 +2,9 @@
 
 ## Objectives
 This project aims to create an environment where needed data to perform sales performance such as data about customers, products, and locations are stored in a data warehouse. Also, to facilitate the process of decision-making, the following tasks should be conducted as the target of this project:
-- A data warehouse;
-- A multidimensional cube;
-- Valuable information about sales performance.
+- A data warehouse
+- A multidimensional cube
+- Valuable information about sales performance
 
 ## Data & Tools
 Adventure Works Cycles (AWC) database (specifically AdventureWorks 2019) will be used in this project as a use case. This database will be divided into many source types in order to address the multi-source data management challenges.
@@ -16,8 +16,8 @@ Tools used in this project:
 ## What we did
 ### 1. Overall Process
 To create a data warehouse, we must first have some data to store in the warehouse. Sooo, here comes the ingestion process for each type of data source:
-- Database: Get full loaded for the first time, then incremental loaded;
-- Other file types (.tsv, .xlsx, .xml, etc.): Get ingested into the staging area and organized into the appropriate folder.
+- Database: Get full loaded for the first time, then incremental loaded
+- Other file types (.tsv, .xlsx, .xml, etc.): Get ingested into the staging area and organized into the appropriate folder
 
 These data will then go through the ETL (Extract, Transform, Load) process and are stored the data warehouse. After that, an OLAP cube will be created to serve the multidimensional analysis.
 
