@@ -18,6 +18,7 @@ Tools used in this project:
 To create a data warehouse, we must first have some data to store in the warehouse. Sooo, here comes the ingestion process for each type of data source:
 - Database: Get full loaded for the first time, then incremental loaded;
 - Other file types (.tsv, .xlsx, .xml, etc.): Get ingested into the staging area and organized into the appropriate folder.
+
 These data will then go through the ETL (Extract, Transform, Load) process and are stored the data warehouse. After that, an OLAP cube will be created to serve the multidimensional analysis.
 
 ### 2. Data Modeling
@@ -35,6 +36,7 @@ The ETL process for our data warehouse consists of these steps:
 - Transform & map data columns
 - Track historical with slowly changing dimension type 2 (SCD) logic
 - Load data to destinated (dimensional/fact) tables
+
 By then, our data warehouse is perfectly formed and ready for analysis.
 
 #### OLAP Cube
