@@ -16,13 +16,13 @@ Tools used in this project:
 ## What we did
 ### 1. Overall Process
 To create a data warehouse, we must first have some data to store in the warehouse. Sooo, here comes the ingestion process for each type of data source:
-- Database: Get full loaded for the first time, then incremental loaded
+- Database: Get fully loaded for the first time, then incremental loaded
 - Other file types (.tsv, .xlsx, .xml, etc.): Get ingested into the staging area and organized into the appropriate folder
 
-These data will then go through the ETL (Extract, Transform, Load) process and are stored the data warehouse. After that, an OLAP cube will be created to serve the multidimensional analysis.
+These data will then go through the ETL (Extract, Transform, Load) process and are stored in the data warehouse. After that, an OLAP cube will be created to serve the multidimensional analysis.
 
 ### 2. Data Modeling
-The next step is to identify which data is going to serve as a fact or a dimensional table. For this project, we conducted the data modeling process following a snowflake schema and identified 1 fact and 7 dimensional tables, which are: DimLocation, DimTerritory, DimCustomer, DimProduct, DimCategory, DimSubcategory, DimTime, and FactSales.
+The next step is to identify which data is going to serve as a fact or a dimensional table. For this project, we conducted the data modeling process following a snowflake schema and identified 01 fact and 07 dimension tables, which are: DimLocation, DimTerritory, DimCustomer, DimProduct, DimCategory, DimSubcategory, DimTime, and FactSales.
 
 ### 3. ETL
 #### Data Staging Area
@@ -40,4 +40,4 @@ The ETL process for our data warehouse consists of these steps:
 By then, our data warehouse is perfectly formed and ready for analysis.
 
 #### OLAP Cube
-Here, we also do an additional step, which is creating an OLAP cube. This cube is used to perform multidimensional analysis, hence will further facilitate AWC in understanding their sales performace in-depth for better decision-making.
+Here, we also do an additional step, which is creating an OLAP cube. This cube is used to perform multidimensional analysis, hence will further facilitate AWC in understanding their sales performance in-depth for better decision-making.
