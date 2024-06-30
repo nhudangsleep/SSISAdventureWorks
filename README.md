@@ -1,5 +1,8 @@
 # SSISAdventureWorks
 
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
 ## Objectives
 This project aims to create an environment where needed data to perform sales performance such as data about customers, products, and locations are stored in a data warehouse. Also, to facilitate the process of decision-making, the following tasks should be conducted as the target of this project:
 - A data warehouse;
