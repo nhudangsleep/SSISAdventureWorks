@@ -14,13 +14,28 @@ Tools used in this project:
 - SQL Server Management Studio (SSMS)
 
 ## What we did
-### 1. Data Ingestion (?) // Overall Process
+### 1. Overall Process
 To create a data warehouse, we must first have some data to store in the warehouse. Sooo, here comes the ingestion process for each type of data source:
 - Database: Get full loaded for the first time, then incremental loaded;
 - Other file types (.tsv, .xlsx, .xml, etc.): Get ingested into the staging area and organized into the appropriate folder.
+These data will then go through the ETL (Extract, Transform, Load) process and are stored the data warehouse. After that, an OLAP cube will be created to serve the multidimensional analysis.
 
 ### 2. Data Modeling
 The next step is to identify which data is going to serve as a fact or a dimensional table. For this project, we conducted the data modeling process following a snowflake schema and identified 1 fact and 7 dimensional tables, which are: DimLocation, DimTerritory, DimCustomer, DimProduct, DimCategory, DimSubcategory, DimTime, and FactSales.
 
 ### 3. ETL
 #### Data Staging Area
+Here, we use a foreach loop to iterate through all file names without having to manually classify them. Within this loop, the 'Execute SQL Command' component is utilized to verify the
+loading status of each file. Once confirmed, the data flow is triggered to load the respective file into the designated table. Simultaneously, vital information, specifically the file name, is logged into the tbl_logs table. 
+
+#### Data Warehouse
+The ETL process for our data warehouse simply contains these steps:
+- Extract data
+- Join relevant tables
+- Transform & map data columns
+- Track historical with slowly changing dimension type 2 (SCD) logic
+- Load data to destinated (dimensional/fact) tables
+By then, our data warehouse is perfectly formed and ready for analysis.
+
+#### OLAP Cube
+Here, we also do an additional step, which is creating an OLAP cube. This cube is used to perform multidimensional analysis, hence will further facilitate AWC in understanding their sales performace in-depth for better decision-making.
