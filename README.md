@@ -8,6 +8,7 @@ This project aims to create an environment where needed data to perform sales pe
 
 ## Data & Tools
 Adventure Works Cycles (AWC) database (specifically AdventureWorks 2019) will be used in this project as a use case. This database will be divided into many source types in order to address the multi-source data management challenges.
+
 Tools used in this project:
 - Visual Studio
 - SQL Server Management Studio (SSMS)
