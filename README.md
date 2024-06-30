@@ -1,6 +1,6 @@
 # SSISAdventureWorks
 
-> [!NOTE]
+> [!HUHU]
 > Useful information that users should know, even when skimming content.
 
 ## Objectives
