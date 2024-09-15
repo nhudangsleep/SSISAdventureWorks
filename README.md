@@ -42,4 +42,4 @@ By then, our data warehouse is perfectly formed and ready for analysis.
 #### OLAP Cube
 Here, we also do an additional step, which is creating an OLAP cube. This cube is used to perform multidimensional analysis, hence will further facilitate AWC in understanding their sales performance in-depth for better decision-making.
 
-For more information, refer to: *231MI4201_LiveLaughLove.pdf*.
+For more information, please refer to *231MI4201_LiveLaughLove.pdf* in Document.
